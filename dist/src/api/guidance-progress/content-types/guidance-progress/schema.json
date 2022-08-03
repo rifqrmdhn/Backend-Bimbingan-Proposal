@@ -1,0 +1,38 @@
+{
+    "kind": "collectionType",
+    "collectionName": "guidance_progresses",
+    "info": {
+        "singularName": "guidance-progress",
+        "pluralName": "guidance-progresses",
+        "displayName": "Guidance Progress",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "note": {
+            "type": "richtext"
+        },
+        "to_do": {
+            "type": "richtext"
+        },
+        "student": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::student.student",
+            "inversedBy": "guidance_progresses"
+        },
+        "lecturer": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::lecturer.lecturer",
+            "inversedBy": "guidance_progresses"
+        },
+        "date": {
+            "type": "date",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "kind": "collectionType",
+    "collectionName": "lecturers",
+    "info": {
+        "singularName": "lecturer",
+        "pluralName": "lecturers",
+        "displayName": "Lecturer",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "lecturer_id": {
+            "type": "string",
+            "unique": true,
+            "required": true
+        },
+        "name": {
+            "type": "string",
+            "required": true,
+            "unique": false
+        },
+        "lecturer_code": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "students": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::student.student",
+            "mappedBy": "advisors"
+        },
+        "guidance_progresses": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::guidance-progress.guidance-progress",
+            "mappedBy": "lecturer"
+        },
+        "password": {
+            "type": "password"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progresses",
+  "info": {
+    "singularName": "progress",
+    "pluralName": "progresses",
+    "displayName": "Progress",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "lecturer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lecturer.lecturer"
+    },
+    "progress_value": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::progress-value.progress-value",
+      "mappedBy": "progress"
+    },
+    "progress_note": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::progress-note.progress-note",
+      "inversedBy": "progress"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "bimbingan",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.3.0-beta.2",
+    "@strapi/plugin-users-permissions": "4.3.0-beta.2",
+    "@strapi/strapi": "4.3.0-beta.2",
+    "@types/bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.1",
+    "pg": "^8.7.3",
+    "pg-connection-string": "^2.5.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "08f180e1-72de-4a13-b3e9-0a381c596926"
+  },
+  "engines": {
+    "node": ">=12.x.x <=19.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
